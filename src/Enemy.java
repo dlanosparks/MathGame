@@ -5,7 +5,11 @@ public class Enemy {
     public MathObject[] questionList;
     private final int EASY = 10, MED = 51, HARD = 100;
 
-
+    /* Creates a new Enemy thats generates questions and attacks users.
+    * @param HP, Total Hp for Enemy
+    * @param enemy, Type of Enemy
+    * @param difficulty, Selects difficulty of enemy
+    */
     public Enemy(int HP, String enemy, int difficulty)
     {
 
@@ -24,10 +28,12 @@ public class Enemy {
         this.questionList = m.generateEquation(difficulty, 10);
     }
 
+    // getter for Total Hp
     public int getTotalHP() {
         return totalHP;
     }
 
+    // Reduces Total Hp
     public void takeDamage (int damageTaken)
     {
         totalHP -= damageTaken;
