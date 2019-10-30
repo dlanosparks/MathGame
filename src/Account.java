@@ -88,6 +88,7 @@ public class Account {
         return username;
     }
 
+    // Reduces total HP
     public static void takeDamage(int damageTaken)
     {
         totalHP -= damageTaken;
